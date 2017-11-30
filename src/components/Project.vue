@@ -67,12 +67,17 @@ export default {
         lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`
       })
     }
-
+//projects to add to this component
+//1. D&D manager app
+//2. Pet Welfare
+//3. Music Manager
+//4. Ruby Pilates App
+//5. MilSpouseCoders
+//6. Chippy Solutions
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1{
+#inspire{
   background-color: pink;
 }
 </style>

@@ -1,40 +1,42 @@
 <template>
   <div class="hello">
-    <v-app id="inspire">
-      <v-toolbar light>
-        <v-toolbar-title>Vail Algatt</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.text">
-          <v-btn flat>{{ item.text }}</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-    </v-app>
-    <about div class="col-xs-12"></about>
-    <project div class="col-xs-12"></project>
-    <contact div class="col-xs-12"></contact>
+    <nav id="header" class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+      <a class="navbar-brand" href="Home"><h1>Vail Algatt</h1></a>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Project">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact">Contact</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+           <a class="nav-link" href="Resume">Resume</a>
+        </span>
+      </div>
+    </nav>
+    <about></about>
+    <project></project>
+    <contact></contact>
   </div>
 </template>
 
 <script>
-import Project from './Project'
-import Contact from './Contact'
-import About from './About'
+import Project from "./Project";
+import Contact from "./Contact";
+import About from "./About";
 
 export default {
-  name: 'Home',
-  data () {
+  name: "Home",
+  data() {
     return {
-      items: [
-        {
-          text: 'About'
-        },
-        {
-          text: 'Projects'
-        },
-        {
-          text: 'Contact'
-        }
-      ]
     }
   },
   components: {
@@ -42,12 +44,9 @@ export default {
     Contact,
     About
   }
-}
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#hello{
-      margin-top:0px;
-}
+
 </style>
