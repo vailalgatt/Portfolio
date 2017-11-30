@@ -18,7 +18,7 @@
           </li>
         </ul>
         <span class="navbar-text">
-           <a class="nav-link" href="Resume">Resume</a>
+           <a class="nav-link" href="https://vailalgatt.github.io/resume-vail/">Resume</a>
         </span>
       </div>
     </nav>
