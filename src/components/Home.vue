@@ -1,6 +1,14 @@
 <template>
   <div class="hello">
-    <navbar></navbar>
+    <v-app id="inspire">
+      <v-toolbar light>
+        <v-toolbar-title>Vail Algatt</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.text">
+          <v-btn flat>{{ item.text }}</v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+    </v-app>
     <about></about>
     <project></project>
     <contact></contact>
@@ -8,20 +16,28 @@
 </template>
 
 <script>
-import Navbar from './Navbar'
 import Project from './Project'
 import Contact from './Contact'
 import About from './About'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      items: [
+        {
+          text: 'About'
+        },
+        {
+          text: 'Projects'
+        },
+        {
+          text: 'Contact'
+        }
+      ]
     }
   },
   components: {
-    Navbar,
     Project,
     Contact,
     About
