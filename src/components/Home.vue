@@ -9,9 +9,9 @@
         </v-toolbar-items>
       </v-toolbar>
     </v-app>
-    <about></about>
-    <project></project>
-    <contact></contact>
+    <about div class="col-xs-12"></about>
+    <project div class="col-xs-12"></project>
+    <contact div class="col-xs-12"></contact>
   </div>
 </template>
 
@@ -47,19 +47,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+#hello{
+      margin-top:0px;
 }
 </style>

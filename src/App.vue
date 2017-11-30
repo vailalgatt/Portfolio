@@ -1,23 +1,16 @@
 <template>
   <div id="app">
-    <!-- <v-app light> -->
       <router-view/>
-    <!-- </v-app> -->
+    <!-- <home></home> -->
   </div>
 </template>
 
 <script>
 import Home from './components/Home'
-import Project from '@/components/Project'
-import About from '@/components/About'
-import Contact from '@/components/Contact'
 export default {
   name: 'app',
   components: {
-    Home,
-    Project,
-    About,
-    Contact
+    Home
   }
 }
 </script>
