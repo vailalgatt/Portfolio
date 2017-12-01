@@ -1,11 +1,11 @@
 <template>
-  <div class="contact">
+  <div class="contact" >
   <v-app id="inspire">
    <h1>Contact</h1>
     <v-container fluid grid-list-md>
       <v-layout row wrap>
         <v-flex d-flex xs12 sm6 md6>
-          <v-card color="purple" dark>
+          <v-card color="blue lighten-3" dark>
             <v-card-title primary class="title">Socials</v-card-title>
             <v-card-text
               v-text="lorem">
@@ -13,7 +13,7 @@
           </v-card>
         </v-flex>
         <v-flex d-flex xs12 sm6 md6>
-          <v-card color="purple" dark>
+          <v-card color="grey darken-2" dark >
             <v-card-title primary class="title">Email</v-card-title>
             <v-card-text
               v-text="lorem">

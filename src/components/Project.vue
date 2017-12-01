@@ -2,12 +2,14 @@
   <div class="project">
    <v-app id="cards">
     <h1>Projects</h1>
-    <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+    <div class="row">
+
+    <v-layout class="projects">
+      <v-flex xs12 sm9 offset-sm2>
         <v-card>
           <v-card-media
             class="blue--text"
-            height="400px"
+            height="300px"
             src="/src/img/music-player.jpg"
           >
           </v-card-media>
@@ -15,7 +17,7 @@
             <div>
               <span class="grey--text">Music Player</span><br>
               <span>Made with:</span><br>
-              <span><i>javascript, sass, bootstrap, itunes api </i></span>
+              <div class="description"><i>javascript, sass, bootstrap, itunes api </i></div>
             </div>
               <v-spacer></v-spacer>
           <v-card-actions>
@@ -27,12 +29,12 @@
     </v-layout>
 
 <!-- d&d -->
-        <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+    <v-layout class="projects">
+      <v-flex xs12 sm9 offset-sm2>
         <v-card>
           <v-card-media
             class="blue--text"
-            height="400px"
+            height="300px"
             src="/src/img/dd.jpg"
           >
           </v-card-media>
@@ -40,7 +42,7 @@
             <div>
               <span class="grey--text">Dungeons Master Encounter Manager</span><br>
               <span>Made with:</span><br>
-              <span><i>vue, sass, bootstrap, itunes api </i></span>
+              <div class="description"><i>vue, sass, bootstrap, dnd5e api</i></div>
             </div>
               <v-spacer></v-spacer>
           <v-card-actions>
@@ -51,14 +53,16 @@
       </v-flex>
     </v-layout>
 
+    </div>
 
+<div class="row">
 <!-- Pet Welfare -->
-        <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+    <v-layout class="projects">
+      <v-flex xs12 sm9 offset-sm2>
         <v-card>
           <v-card-media
             class="blue--text"
-            height="400px"
+            height="300px"
             src="/src/img/pet-welfare.jpg"
           >
           </v-card-media>
@@ -66,7 +70,7 @@
             <div>
               <span class="grey--text">Pet Welfare</span><br>
               <span>Made with:</span><br>
-              <span><i>vue, sass, bootstrap, itunes api </i></span>
+              <div class="description"><i>javascript, sass, bootstrap, google api </i></div>
             </div>
               <v-spacer></v-spacer>
           <v-card-actions>
@@ -80,12 +84,12 @@
 
 
 <!-- d&d -->
-        <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+    <v-layout class="projects">
+      <v-flex xs12 sm9 offset-sm2>
         <v-card>
           <v-card-media
             class="blue--text"
-            height="400px"
+            height="300px"
             src="/src/img/ruby.jpg"
           >
           </v-card-media>
@@ -93,7 +97,7 @@
             <div>
               <span class="grey--text">Pilates Forum</span><br>
               <span>Made with:</span><br>
-              <span><i>Ruby on Rails, sass, bootstrap, coffeescript </i></span>
+              <div class="description"><i>Ruby on Rails, sass, bootstrap </i></div>
             </div>
               <v-spacer></v-spacer>
           <v-card-actions>
@@ -104,15 +108,16 @@
       </v-flex>
     </v-layout>
 
+</div>
 
-
+<div class="row">
 <!-- d&d -->
-        <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+    <v-layout class="projects">
+      <v-flex xs12 sm9 offset-sm2>
         <v-card>
           <v-card-media
             class="blue--text"
-            height="400px"
+            height="300px"
             src="/src/img/kanban.jpg"
           >
           </v-card-media>
@@ -120,7 +125,7 @@
             <div>
               <span class="grey--text">Kanban</span><br>
               <span>Made with:</span><br>
-              <span><i>vue, sass, bootstrap</i></span>
+              <div class="description"><i>Vue, sass, bootstrap </i></div>
             </div>
               <v-spacer></v-spacer>
           <v-card-actions>
@@ -134,12 +139,12 @@
 
 
 <!-- d&d -->
-        <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+    <v-layout class="projects">
+      <v-flex xs12 sm9 offset-sm2>
         <v-card>
           <v-card-media
             class="blue--text"
-            height="400px"
+            height="300px"
             src="/src/img/chippy.jpg"
           >
           </v-card-media>
@@ -147,7 +152,7 @@
             <div>
               <span class="grey--text">Chippy Solutions</span><br>
               <span>Made with:</span><br>
-              <span><i>React, sass, bootstrap </i></span>
+              <div class="description"><i>React, sass, bootstrap </i></div>
             </div>
               <v-spacer></v-spacer>
           <v-card-actions>
@@ -157,6 +162,7 @@
         </v-card>
       </v-flex>
     </v-layout>                
+</div>
   </v-app>
 </div>
 </template>
@@ -180,5 +186,11 @@ export default {
 <style scoped>
 h1{
   padding-bottom: 20px;
+}
+.projects{
+  padding: 20px;
+}
+.description {
+  font-size: 12px;
 }
 </style>
