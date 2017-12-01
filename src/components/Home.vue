@@ -25,6 +25,7 @@
     <about></about>
     <project></project>
     <contact></contact>
+    <div id="myMap"></div>
   </div>
 </template>
 
@@ -35,6 +36,19 @@ import About from "./About";
 
 export default {
   name: "Home",
+  mounted: function() {
+      console.log("map: ", google.maps)
+          this.map = new google.maps.Map(document.getElementById('myMap'), {
+          center: {lat:43.0511086, lng: -115.90115},
+          scrollwheel: false,
+          zoom: 10
+          })
+  //   var marker = new google.maps.Marker({
+  //    position: center,
+  //    map: map
+  //  });
+  // working on making the marker!
+  },
   data() {
     return {
     }
@@ -48,5 +62,8 @@ export default {
 </script>
 
 <style scoped>
-
+#myMap {
+  height: 300px;
+  width: 100%;
+}
 </style>

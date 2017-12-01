@@ -1,56 +1,22 @@
 <template>
   <div class="contact">
   <v-app id="inspire">
+   <h1>Contact</h1>
     <v-container fluid grid-list-md>
       <v-layout row wrap>
-        <v-flex d-flex xs12 sm6 md4>
+        <v-flex d-flex xs12 sm6 md6>
           <v-card color="purple" dark>
-            <v-card-title primary class="title">Contact</v-card-title>
+            <v-card-title primary class="title">Socials</v-card-title>
             <v-card-text
               v-text="lorem">
             </v-card-text>
           </v-card>
         </v-flex>
-        <v-flex d-flex xs12 sm6 md3>
-          <v-layout row wrap>
-            <v-flex d-flex>
-              <v-card color="indigo" dark>
-                <v-card-text
-                  v-text="lorem.slice(0, 70)">
-                </v-card-text>
-              </v-card>
-            </v-flex>
-            <v-flex d-flex>
-              <v-layout row wrap>
-                <v-flex d-flex
-                  v-for="n in 2"
-                  :key="n"
-                  xs12
-                >
-                  <v-card
-                    color="red lighten-2"
-                    dark
-                  >
-                    <v-card-text
-                      v-text="lorem.slice(0, 40)">
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-flex>
-          </v-layout>
-        </v-flex>
-        <v-flex d-flex xs12 sm6 md2 child-flex>
-          <v-card color="green lighten-2" dark>
+        <v-flex d-flex xs12 sm6 md6>
+          <v-card color="purple" dark>
+            <v-card-title primary class="title">Email</v-card-title>
             <v-card-text
-              v-text="lorem.slice(0, 90)">
-            </v-card-text>
-          </v-card>
-        </v-flex>
-        <v-flex d-flex xs12 sm6 md3>
-          <v-card color="blue lighten-2" dark>
-            <v-card-text
-              v-text="lorem.slice(0, 100)">
+              v-text="lorem">
             </v-card-text>
           </v-card>
         </v-flex>
@@ -62,15 +28,15 @@
 
 <script>
 export default {
-  name: 'Contact',
-    data: () => ({
-        lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`
-      })
-}
+  name: "Contact",
+  data: () => ({
+    lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`
+  })
+};
 </script>
 
 <style scoped>
-#inspire{
-  background-color: green;
+#inspire {
+  padding-top: 20px;
 }
 </style>

@@ -11,7 +11,6 @@
             </v-card-text>
           </v-card>
         </v-flex>
-
 <!-- education section -->
         <v-flex d-flex xs12 sm6 md4>
           <v-layout row wrap>
@@ -60,10 +59,22 @@
 
 
 <!-- work section -->
-       <v-flex d-flex xs12 sm6 md6 child-flex>
+       <v-flex d-flex xs12 sm6 md12 child-flex>
           <v-layout row wrap>
             <v-flex d-flex>
               <v-card color="grey darken-2" dark>
+                <v-card-title primary class="title">Additional Information</v-card-title>
+                <v-card-text class="text-xs-center"
+                  v-text="work">
+                </v-card-text>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+       <v-flex d-flex xs12 sm6 md4 child-flex>
+          <v-layout row wrap>
+            <v-flex d-flex>
+          <v-card color="blue lighten-3" dark>
                 <v-card-text
                   v-text="workChippy">
                 </v-card-text>
@@ -71,9 +82,21 @@
             </v-flex>
           </v-layout>
         </v-flex>
+             
+        <v-flex d-flex xs12 sm6 md4 child-flex>
+          <v-layout row wrap>
+            <v-flex d-flex>
+          <v-card color="blue lighten-3" dark>
+                <v-card-text
+                  v-text="available">
+                </v-card-text>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-flex>
 
-        <v-flex d-flex xs12 sm6 md6>
-          <v-card color="grey darken-2" dark>
+        <v-flex d-flex xs12 sm6 md4 child-flex>
+          <v-card color="blue lighten-3" dark>
             <v-card-text
               v-text="additionalInformation">
             </v-card-text>
@@ -92,14 +115,18 @@ export default {
       about: `Based in Mountain Home AFB, ID.`, 
       MSC: `I am a chapter leader with MilSpouseCoders 
               `,
-      education: ``,        
+      education: ``,
+      work: ``,        
       educationPCC: `I hold a Computer Information Systems degree from Portland Community College.`,
       educationCW: `I'm a graduate of Boise CodeWorks Immersive Full-Stack. `,
       workChippy: `Owner and founder of the consulting and customer software development company Chippy Solutions. Call or Email to make an appointment for your first consultation`,
-      additionalInformation: `I am a military spouse. Coffee fiend. Dog mom. STOTT certified Pilates instructor. And long time violinist.`
+      additionalInformation: `I am a military spouse. Coffee fiend. Dog mom. STOTT certified Pilates instructor. And long time violinist.`,
+      available: `I'm currently available to take new clients`
       })
     }
+    
 </script>
+
 
 <style scoped>
 #inspire{
@@ -107,4 +134,5 @@ export default {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+
 </style>
