@@ -13,8 +13,8 @@
           </v-card>
         </v-flex>
         <v-flex d-flex xs12 sm6 md6>
-          <v-card>
-            <v-form v-model="valid" ref="form" lazy-validation class="show">
+          <v-card id="email">
+            <v-form v-model="valid" ref="form" lazy-validation>
               <v-text-field
                 label="Name"
                 v-model="name"
@@ -29,14 +29,14 @@
                 required
               ></v-text-field>
               <v-select
-                label="Item"
+                label="Reason"
                 v-model="select"
                 :items="items"
                 :rules="[v => !!v || 'Item is required']"
                 required
               ></v-select>
               <v-text-field
-                label="Info"
+                label="Your Message"
                 v-model="info"
                 :rules="infoRules"
                 required
@@ -102,6 +102,10 @@ export default {
 <style scoped>
 #inspire {
   padding-top: 20px;
+}
+
+#email{
+  padding: 30px;;
 }
 
 .show {
