@@ -72,7 +72,7 @@
        <v-flex d-flex xs12 sm6 md12 child-flex>
           <v-layout row wrap>
             <v-flex d-flex>
-              <v-card color="blue-grey" dark>
+               <v-card class="change">
                 <v-card-title primary class="title" v-text="available"></v-card-title>
               </v-card>
             </v-flex>
@@ -123,5 +123,20 @@ export default {
   border: solid black thin;
   padding: 15px;
 }
+
+.change{
+  background: white;
+}
+
+.change:hover{
+  background-color:#607d8b;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
 
 </style>
