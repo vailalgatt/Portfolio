@@ -5,16 +5,26 @@
     <v-container fluid grid-list-md>
       <v-layout row wrap>
         <v-flex d-flex xs12 sm6 md6>
-          <v-card class="change">
+          <v-card id="social">
             <v-card-title primary class="title">Socials</v-card-title>
             <v-card-text
-              v-text="socials">
+              v-text="socialMedia">
             </v-card-text>
+            <div id="socialShow">
+              I'm hidden
+            </div>
+            <div id="socialHide">
+              I show
+            </div>
           </v-card>
         </v-flex>
         <v-flex d-flex xs12 sm6 md6>
-          <v-card id="email">
-            <v-form v-model="valid" ref="form" lazy-validation>
+          <v-card>
+            <v-card-title primary class="title">Quick Contact</v-card-title>
+              <v-card-text
+                v-text="quickContact">
+              </v-card-text>
+            <v-form v-model="valid" ref="form" lazy-validation id="email">
               <v-text-field
                 label="Name"
                 v-model="name"
@@ -47,7 +57,6 @@
                 >
                   submit
                 </v-btn>
-              <v-btn @click="clear">clear</v-btn>
             </v-form>
           </v-card>
         </v-flex>
@@ -61,6 +70,8 @@
 export default {
   name: "Contact",
   data: () => ({
+    quickContact: `Need to get ahold of me NOW?`,
+    socialMedia: `Connect with me`,
     valid: true,
     name: '',
     nameRules: [
@@ -99,40 +110,72 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #inspire {
   padding-top: 20px;
 }
 
-#email{
-  padding: 30px;;
-}
+// .quickContact{
+//   background-color: red;
+// }
 
-.show {
-  background: white;
-}
+// #email {
+//   padding: 30px;
+//   background: white;
+//   display: none;
+// }
 
-.show:hover {
-  background-color: #607d8b;
-  color: white;
-  cursor: pointer;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
-}
+// #email:hover {
+//   display: show;
+//   background-color: red;
+//   color: white;
+//   cursor: pointer;
+//   -webkit-transition: background-color 2s ease-out;
+//   -moz-transition: background-color 2s ease-out;
+//   -o-transition: background-color 2s ease-out;
+//   transition: background-color 2s ease-out;
+// }
 
-.change {
-  background: white;
-}
+/* .v-card{
+  padding: 25px;
+} */
 
-.change:hover {
-  background-color: #607d8b;
-  color: white;
-  cursor: pointer;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
+#social{
+  background-color: white;
+
+  #social:hover{
+    background-color: red;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);  
+  }
+
+    // #socialHide {
+    //   background-color: red;
+    //   padding: 30px;      
+    // }
+
+    // #socialShow {
+    //   background-color:purple;
+    //   padding: 30px;
+    //   display: none;
+    // }
+    
+    // #socialShow:hover {
+    //   display: inline;
+    //   padding: 30px; 
+    //   background-color: green;
+    //   color: white;
+    //   -webkit-transform: rotate(360deg);
+    //   transform: rotate(360deg);
+    // }
+
+    // #socialHide:hover {
+    //   padding: 30px; 
+    //   display: none;
+    //   background-color: blue;
+    //   color: white;
+    //   -webkit-transform: rotate(360deg);
+    //   transform: rotate(360deg);
+    // }
 }
 </style>
