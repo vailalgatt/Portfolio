@@ -1,20 +1,20 @@
 <template>
   <div class="hello">
-    <nav id="header" class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
-      <a class="navbar-brand" href="Home"><h1>Vail Algatt</h1></a>
+    <nav id="header" class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+      <a class="navbar-brand" href="Home"><h1>VAIL ALGATT</h1></a>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="Home" id="styleLink">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="About">About</a>
+            <a class="nav-link" href="About" id="styleLink">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Project">Projects</a>
+            <a class="nav-link" href="Project" id="styleLink">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact">Contact</a>
+            <a class="nav-link" href="Contact" id="styleLink">Contact</a>
           </li>
         </ul>
         <span class="navbar-text">
@@ -22,9 +22,28 @@
         </span>
       </div>
     </nav>
+
+      <vue-particles
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="star"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
     <about></about>
     <project></project>
     <contact></contact>
+      </vue-particles>
   <gmap-map
     :center="center"
     :zoom="10"
@@ -72,4 +91,21 @@ export default {
 
 <style scoped>
 
+.nav-link{
+  color: white;
+  font-weight: bold;
+}
+
+.nav-link:hover{
+  color: #b76e79;
+}
+
+#styleLink{
+  font-weight: bold;
+}
+
+#styleLink:hover{
+      text-decoration: line-through #b76e79;
+
+}
 </style>

@@ -1,27 +1,48 @@
 <template>
   <div id="app">
       <!-- <router-view/> -->
-    <home></home>
+      <home>
+      </home>
+
+        <!-- <vue-particles
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="star"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles> -->
   </div>
 </template>
 
 <script>
-import Home from './components/Home'
+import Home from "./components/Home";
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Home
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: black;
 }
 </style>
