@@ -3,23 +3,18 @@
   <v-app id="inspire">
    <h1>Contact</h1>
     <v-container fluid grid-list-md>
-      <v-layout row wrap>
+      <v-layout row wrap id="contact">
         <v-flex d-flex xs12 sm6 md6>
           <v-card id="social">
             <v-card-title primary class="title">Socials</v-card-title>
             <v-card-text
               v-text="socialMedia">
+
             </v-card-text>
-            <div id="socialShow">
-              I'm hidden
-            </div>
-            <div id="socialHide">
-              I show
-            </div>
           </v-card>
         </v-flex>
         <v-flex d-flex xs12 sm6 md6>
-          <v-card>
+          <v-card id="quickContact">
             <v-card-title primary class="title">Quick Contact</v-card-title>
               <v-card-text
                 v-text="quickContact">
@@ -67,11 +62,13 @@
 </template>
 
 <script>
+
 export default {
   name: "Contact",
   data: () => ({
     quickContact: `Need to get ahold of me NOW?`,
     socialMedia: `Connect with me`,
+    show: false,
     valid: true,
     name: '',
     nameRules: [
@@ -113,69 +110,26 @@ export default {
 <style lang="scss" scoped>
 #inspire {
   padding-top: 20px;
+  padding-bottom: 0px;
 }
 
-// .quickContact{
-//   background-color: red;
-// }
-
-// #email {
-//   padding: 30px;
-//   background: white;
-//   display: none;
-// }
-
-// #email:hover {
-//   display: show;
-//   background-color: red;
-//   color: white;
-//   cursor: pointer;
-//   -webkit-transition: background-color 2s ease-out;
-//   -moz-transition: background-color 2s ease-out;
-//   -o-transition: background-color 2s ease-out;
-//   transition: background-color 2s ease-out;
-// }
-
-/* .v-card{
-  padding: 25px;
-} */
-
-#social{
-  background-color: white;
-
-  #social:hover{
-    background-color: red;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);  
-  }
-
-    // #socialHide {
-    //   background-color: red;
-    //   padding: 30px;      
-    // }
-
-    // #socialShow {
-    //   background-color:purple;
-    //   padding: 30px;
-    //   display: none;
-    // }
-    
-    // #socialShow:hover {
-    //   display: inline;
-    //   padding: 30px; 
-    //   background-color: green;
-    //   color: white;
-    //   -webkit-transform: rotate(360deg);
-    //   transform: rotate(360deg);
-    // }
-
-    // #socialHide:hover {
-    //   padding: 30px; 
-    //   display: none;
-    //   background-color: blue;
-    //   color: white;
-    //   -webkit-transform: rotate(360deg);
-    //   transform: rotate(360deg);
-    // }
+#contact{
+  border: solid thin grey;
 }
+
+#quickContact{
+background-color: transparent;
+
+}
+
+#email {
+  padding: 30px;
+  display: none;
+}
+
+#social {
+  padding: 30px;
+  background-color: transparent;
+}
+
 </style>
