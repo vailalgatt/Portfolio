@@ -25,7 +25,20 @@
     <about></about>
     <project></project>
     <contact></contact>
-    <div id="myMap"></div>
+  <gmap-map
+    :center="center"
+    :zoom="10"
+    style="width: 100%; height: 300px"
+  >
+    <gmap-marker
+      :key="index"
+      v-for="(m, index) in markers"
+      :position="m.position"
+      :clickable="true"
+      :draggable="true"
+      @click="center=m.position"
+    ></gmap-marker>
+  </gmap-map>
   </div>
 </template>
 
@@ -36,22 +49,18 @@ import About from "./About";
 
 export default {
   name: "Home",
-  mounted: function() {
-      console.log("map: ", google.maps)
-          this.map = new google.maps.Map(document.getElementById('myMap'), {
-          center: {lat:43.0511086, lng: -115.90115},
-          scrollwheel: false,
-          zoom: 10
-          })
-  //   var marker = new google.maps.Marker({
-  //    position: center,
-  //    map: map
-  //  });
-  // working on making the marker!
-  },
   data() {
     return {
-    }
+      center: { lat: 43.0511086, lng: -115.90115 },
+      markers: [
+        {
+          position: { lat: 43.0511086, lng: -115.90115 }
+        },
+        {
+          position: { lat: 43.0511086, lng: -115.90115 }
+        }
+      ]
+    };
   },
   components: {
     Project,
@@ -62,8 +71,5 @@ export default {
 </script>
 
 <style scoped>
-#myMap {
-  height: 300px;
-  width: 100%;
-}
+
 </style>

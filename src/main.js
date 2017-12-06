@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-// import * as VueGoogleMaps from 'vue2-google-maps' 
+import * as VueGoogleMaps from 'vue2-google-maps' 
 // Vue.use(VueGoogleMaps, {
 //   load: {
 //     key: 'AIzaSyBvWE_sIwKbWkiuJQOf8gSk9qzpO96fhfY',
@@ -15,6 +15,12 @@ import 'vuetify/dist/vuetify.min.css'
 //     // (as you require)
 //   }
 // })
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyBzYZd-wOu9o5enbhRgumWUsEzsqGeBR8g',
+    libraries: 'places'
+  }
+})
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 
