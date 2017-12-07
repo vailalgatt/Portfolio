@@ -1,7 +1,6 @@
 <template>
   <div class="project">
    <v-app id="cards">
-    <h1>Projects</h1>
     <div class="row">
 
     <v-layout class="projects">
@@ -184,12 +183,13 @@ export default {
 </script>
 
 <style scoped>
-h1{
-  padding-bottom: 20px;
-}
+
 .projects{
   padding: 20px;
+  background-color: black;
+  color: white;
 }
+
 .description {
   font-size: 12px;
 }
